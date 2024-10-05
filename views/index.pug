@@ -4,7 +4,27 @@ html
         style
             include ../static/style.css 
     body
-        nav#navbar.top 
-            | this
+        nav#navbar 
+            ul
+                //- creating an embedded <a></a> without multiple lines
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/") Services]
+                li #[a(href="/") Class Info]
+                li #[a(href="/") Contact Us]
+                //- could do it like this (see below) but why it's super messy
+                //- li
+                //-     a(href="/")
+                //-         | test
+
+        section#introSection
+            | section for picture
+        
+        section#sponsorSection
+            | section for sponsors
+        
+        footer#footer
+            | footer goes here
+        
         script
             include ../static/index.js
