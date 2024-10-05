@@ -8,7 +8,7 @@
 }
 
 #navbar {
-    background-color: black;
+    background-color: #d43b3b;
     padding: 13px 14px;
     font-family: 'Yeon Sung';
 }
@@ -24,9 +24,13 @@
 }
 
 #navbar li a{
+    font-size: 20px;
     color: white;
     text-decoration: none;
-    padding: 13px 30px;
+    padding: 13px 20px;
+}
+#navbar li a:hover{
+    color: black;
 }
 
 #introSection {
@@ -35,14 +39,27 @@
     font-family: "ZCOOL QingKe HuangYou";
     font-size: 35px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 300px;
+    padding-bottom: 40px;
+}
+
+#introSection .small {
+    font-size: 27px;
+    padding: 2px;
 }
 
 #sponsorSection {
     height: 300px;
-    background-color: yellow;
+    background-color: #fbd6d2c7;
+}
+
+#sponsorSection h2 {
+    font-family: 'Yeon Sung';
+    text-align: center;
+    padding-top: 12px;
 }
 
 #footer {
