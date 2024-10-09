@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'views')) // 'views' is folder name //
 // ENDPOINTS
 app.get('/', (req, res) => {
     const params = {};
-    res.status(200).render('index.pug', params); // file we want to run/render
+    res.status(200).render('home.pug', params); // file we want to run/render
 });
 
 // STARTING THE SERVER
