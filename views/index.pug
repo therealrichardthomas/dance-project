@@ -7,6 +7,9 @@ html
     body
         nav#navbar 
             ul
+                div#logo
+                    img(src="/static/img/logo.png")
+                    | RDA
                 //- creating an embedded <a></a> without multiple lines
                 li #[a(href="/") Home]
                 li #[a(href="/") About]
@@ -26,16 +29,36 @@ html
             h2 Our Mission
             div.card
                 h3 Dance Perfection
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/1.png")
+                    div.card-content
+                        p To encourage performers to be their best
             div.card
                 h3 Dance The Way You Like
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/2.png")
+                    div.card-content
+                        p Provide multiple styles of dance to choose from
             div.card
                 h3 Expert Teaching
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/3.png")
+                    div.card-content
+                        p Professional dancers trained to teach you no matter the skill
 
         section#sponsorSection
             h2 Our Sponsors
+            div#sponsors
+                img(src="/static/img/logo1.png", alt="Sponsor Image", class="spImage")
+                img(src="/static/img/logo2.png", alt="Sponsor Image", class="spImage")
+                img(src="/static/img/logo3.png", alt="Sponsor Image", class="spImage")
+                img(src="/static/img/logo4.png", alt="Sponsor Image", class="spImage")
         
         footer#footer
-            | footer goes here
+            | Copyright © 2024 RichardDanceAcademy.com | All Rights Reserved
         
         script
             include ../static/index.js
