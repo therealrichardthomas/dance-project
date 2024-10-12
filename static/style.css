@@ -50,7 +50,7 @@
 }
 
 #introSection {
-    background: no-repeat center/cover url('./static/bg.jpg');
+    background: no-repeat center/cover url('../static/bg.jpg');
     color: white;
     font-family: "ZCOOL QingKe HuangYou";
     font-size: 65px;
@@ -83,7 +83,7 @@
     display: inline-block;
     border: 2px solid black;
     border-radius: 10px;
-    width: 30%;
+    width: 29%;
     margin: 23px 16px;
     height: 209px;
 }
