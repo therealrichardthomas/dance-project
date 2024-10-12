@@ -18,6 +18,11 @@ app.get('/', (req, res) => {
     res.status(200).render('home.pug', params); // file we want to run/render
 });
 
+app.get('/contact', (req, res) => {
+    const params = {};
+    res.status(200).render('contact.pug', params); // file we want to run/render
+});
+
 // STARTING THE SERVER
 app.listen(port, () => {
     console.log(`The application started successfully on port ${port}`);
