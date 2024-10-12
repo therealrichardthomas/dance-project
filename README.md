@@ -12,4 +12,5 @@ Installation Instructions:
   - run https://therealrichardthomas.github.io/dance-project/views/index.html in the browser
 
 *Notes*
-  - I used PUG as the main HTML file for this project; however, GitHub can only run on static views and through an index.html file in the root page. So I created new HTML files that were relevant to the project by converting the PUG files to HTML and placed them in the corresponding directories. Since GitHub uses an index.html file in the root directory, I also created another index.html file in the root that redirects to the index.html in the views folder that contains the entire project. 
+  - I used PUG as the main HTML file for this project; however, GitHub can only run on static views and through an index.html file in the root page. So I created new HTML files that were relevant to the project by converting the PUG files to HTML and placed them in the corresponding directories. Since GitHub uses an index.html file in the root directory, I also created another index.html file in the root that redirects to the index.html in the views folder that contains the entire project.
+  - In addition, this project doesn't run any of the server-side applications because GitHub is a static publisher meaning dynamic aspects in the backend such as Node and Express.js won't be seen while running this project.
