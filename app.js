@@ -3,25 +3,24 @@ const path = require('path');
 const fs = require('fs'); // using a file system
 const app = express(); // importing express
 const mongoose = require('mongoose'); // using mongoose
+const bodyparser = require('body-parser');
 const port = 8000; // creating a port to run my files
 
 
 // starting the mongoose database
-main().catch(err => console.log(err));
+mongoose.connect('mongodb://127.0.0.1:27017/contactDance'); // contactDance is the db
 
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/contactDance');
-
-  //defining mongoose schema
-  const contactSchema = new mongoose.Schema({
-      phone: String,
+//defining mongoose schema
+const contactSchema = new mongoose.Schema({
+    phone: String,
     name: String,
     email: String,
     address: String,
     desc: String
-  });
-  const Contact = mongoose.model('Contact', contactSchema); //compiling
-}
+});
+
+//compiling into a contacts collection
+const Contact = mongoose.model('Contact', contactSchema); 
 
 // EXPRESS SPECIFIC STUFF
 app.use("/static", express.static('static')); // used just for viewing not running the file
@@ -43,8 +42,15 @@ app.get('/contact', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-    const params = {};
-    res.status(200).render('contact.pug', params);
+    var myData = new Contact(req.body); // creates a new contact object from the request
+
+    myData.save().then(() => {
+        res.send("This item has been saved to the database."); // if saved then sends this message
+    }).catch(() => {
+
+        // if not saved, an error has been produced and sends this message
+        res.status(400).send("This item has not been saved to the database."); 
+    })
 });
 
 // STARTING THE SERVER
