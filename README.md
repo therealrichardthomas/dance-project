@@ -1,12 +1,13 @@
 # dance-project
 Project Title: Dance Academy
 
-Project Description: This project uses PUG, Node.js, Express, and CSS to create a fake dance academy website practicing these skills. I was learning how to use PUG for the first time through this project along with using Node.js and Express to implement its features. In this project, I learned how to use PUG inheritance, create a localhost server, and retrieving data from other files (e.g. retrieving the Contact Page). 
+Project Description: This project uses PUG, Node.js, Express, CSS, and MongoDB to create a fake dance academy website practicing these skills. I was learning how to use PUG for the first time through this project along with using Node.js and Express to implement its features. In this project, I learned how to use PUG inheritance, create a localhost server, retrieve data from other files (e.g. retrieving the Contact Page), and store data from the contact form to a Mongo database. 
 
 Project Technologies Used:
   - PUG: PUG is a template enginer that simplifies writing HTML code (learned PUG inheritance and basic PUG syntax)
   - Node.js: to create server-side applications within the localhost
   - Express.js: works with Node.js to simplify handling server requests
+  - MongoDB: to store data submitted from the contact form
 
 Installation Instructions: 
   - run https://therealrichardthomas.github.io/dance-project/views/index.html in the browser
